@@ -1,3 +1,4 @@
+import kristy from '../../assets/Images/Avatars/kristy.png';
 
 
 export function generateVoteCount() {
@@ -20,8 +21,8 @@ export const Products = [
         description: 'Earn points when your favorite politicians pass legislation.',
         url: '#',
         votes: generateVoteCount(),
-        submitterAvatarUrl: './assets/Images/Avatars/kristy.png',
-        productImageUrl: './assets/Images/Products/image-rose.png',
+        submitterAvatarUrl: kristy,
+        productImageUrl: "ImageRose",
       },
       {
         id: 3,
