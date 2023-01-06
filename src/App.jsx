@@ -4,8 +4,8 @@ import ProductList from './Components/ProductList'
 function App() {
 
   return (
-    <div className="container mx-auto d-flex justify-center">
-      <h1>Popular Products</h1>
+    <div className="container mx-auto my-5 d-flex justify-content-center flex-column">
+      <h1 className='text-center'>Popular Products</h1>
       <hr />
       <ProductList />
     </div>

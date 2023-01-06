@@ -7,8 +7,25 @@ function ProductList() {
   const [seed, setSeed] = useState([]);
   useEffect(() => {
     setSeed(Products);
-    console.log(seed);
   }, []);
+
+  const sortedProducts = seed.sort((a, b) => b.votes - a.votes )
+  
+  function increaseVote(productId) {
+    const products = sortedProducts
+    products.forEach(product => {
+      if (productId === product.id) {
+        return Object.assign({}, product, {
+          votes: product.votes += 1
+        })
+      } else {
+        return product;
+      }
+    })
+    setSeed(products);
+  }
+  
+
 
   const products = seed.map((product) => {
     return (
@@ -18,11 +35,14 @@ function ProductList() {
         productDesc={product.description}
         productImgUrl={product.productImageUrl}
         productOwnerImg={product.submitterAvatarUrl}
+        productVotes={product.votes}
+        increaseVote={increaseVote}
+        productId={product.id}
       />
     );
   });
   return (
-    <div className="container">
+    <div className="container d-flex flex-column">
       { products }
     </div>
   );

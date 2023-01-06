@@ -1,4 +1,12 @@
 import kristy from '../../assets/Images/Avatars/kristy.png';
+import veronika from '../../assets/Images/Avatars/veronika.jpg';
+import daniel from '../../assets/Images/Avatars/daniel.jpg'
+import molly from '../../assets/Images/Avatars/daniel.jpg';
+import aqua from '../../assets/Images/Products/aqua.png';
+import rose from '../../assets/Images/Products/rose.png';
+import steel from '../../assets/Images/Products/steel.png';
+import yellow from '../../assets/Images/Products/yellow.png'
+
 
 
 export function generateVoteCount() {
@@ -12,8 +20,8 @@ export const Products = [
         description: 'On-demand sand castle construction expertise.',
         url: '#',
         votes: generateVoteCount(),
-        submitterAvatarUrl: './assets/Images/Avatars/daniel.jpg',
-        productImageUrl: './assets/Images/Products/image-aqua.png',
+        submitterAvatarUrl: daniel,
+        productImageUrl: aqua,
       },
       {
         id: 2,
@@ -22,7 +30,7 @@ export const Products = [
         url: '#',
         votes: generateVoteCount(),
         submitterAvatarUrl: kristy,
-        productImageUrl: "ImageRose",
+        productImageUrl: rose,
       },
       {
         id: 3,
@@ -30,8 +38,8 @@ export const Products = [
         description: 'We already have your measurements and shipping address.',
         url: '#',
         votes: generateVoteCount(),
-        submitterAvatarUrl: './assets/Images/Avatars/veronika.jpg',
-        productImageUrl: './assets/Images/Products/image-steel.png',
+        submitterAvatarUrl: veronika,
+        productImageUrl: steel,
       },
       {
         id: 4,
@@ -39,8 +47,8 @@ export const Products = [
         description: 'High-minded or absent-minded? You decide.',
         url: '#',
         votes: generateVoteCount(),
-        submitterAvatarUrl: './assets/Images/Avatars/molly.png',
-        productImageUrl: './assets/Images/Products/image-yellow.png',
+        submitterAvatarUrl: molly,
+        productImageUrl: yellow,
       },
     ];
   
