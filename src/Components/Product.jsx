@@ -13,7 +13,7 @@ function Product({productDesc, productImgUrl, productTitle, productOwnerImg, pro
       </div>
       <div className='product-info-container'>
         <div className="vote-link">
-            <a className='me-2' onClick={increaseVoteHandler}><AiFillCaretUp /></a>
+            <a className='me-2' role="button" onClick={increaseVoteHandler}><AiFillCaretUp /></a>
             {productVotes}
         </div>
         <div className="middle-aligned-content">
