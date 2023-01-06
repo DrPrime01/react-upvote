@@ -27,7 +27,7 @@ function ProductList() {
   
 
 
-  const products = seed.map((product) => {
+  const products = sortedProducts.map((product) => {
     return (
       <Product
         key={product.id}

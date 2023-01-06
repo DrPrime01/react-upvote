@@ -17,7 +17,7 @@ function Product({productDesc, productImgUrl, productTitle, productOwnerImg, pro
             {productVotes}
         </div>
         <div className="middle-aligned-content">
-            <h2 className=''>{ productTitle }</h2>
+            <h3 className=''>{ productTitle }</h3>
             <p className=''>{ productDesc }</p>
         </div>
         <div className='lower-aligned-content'>
