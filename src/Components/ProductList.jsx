@@ -8,24 +8,22 @@ function ProductList() {
   useEffect(() => {
     setSeed(Products);
   }, []);
-
-  const sortedProducts = seed.sort((a, b) => b.votes - a.votes )
   
-  function increaseVote(productId) {
-    const products = sortedProducts
-    products.forEach(product => {
+  function voteProduct(productId) {
+    const products = seed;
+    const newProducts = products.map(product => {
       if (productId === product.id) {
         return Object.assign({}, product, {
-          votes: product.votes += 1
+          votes: product.votes + 1,
         })
       } else {
         return product;
       }
     })
-    setSeed(products);
+    setSeed(newProducts);
   }
-  
 
+  const sortedProducts = seed.sort((a, b) => b.votes - a.votes )
 
   const products = sortedProducts.map((product) => {
     return (
@@ -36,8 +34,8 @@ function ProductList() {
         productImgUrl={product.productImageUrl}
         productOwnerImg={product.submitterAvatarUrl}
         productVotes={product.votes}
-        increaseVote={increaseVote}
-        productId={product.id}
+        id={product.id}
+        voteProduct={voteProduct}
       />
     );
   });

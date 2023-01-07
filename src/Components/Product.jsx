@@ -7,11 +7,12 @@ function Product({
   productTitle,
   productOwnerImg,
   productVotes,
-  increaseVote,
-  productId,
+  voteProduct,
+  id,
 }) {
+  
   function increaseVoteHandler() {
-    increaseVote(productId);
+    voteProduct(id);
   }
 
   return (
@@ -37,7 +38,7 @@ function Product({
           <p className="">{productDesc}</p>
         </div>
         <div className="lower-aligned-content">
-          <span className="">Submitted by: </span>
+          <span className="">Submitted by:  </span>
           <img
             src={productOwnerImg}
             alt="product-owner"
